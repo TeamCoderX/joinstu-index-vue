@@ -8,7 +8,11 @@
 
 <script>
 export default {
+<<<<<<< HEAD
     name: 'error',
+=======
+    name: 'errorPage',
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
     methods: {
         NotFoundBack() {
             this.$router.push({ name: 'proposeList', query: { page: 1 } })

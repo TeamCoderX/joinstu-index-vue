@@ -25,7 +25,11 @@ export default {
     methods: {
         redirectAdd() {
             ajax.post('accounts/status', {},
+<<<<<<< HEAD
                 (res) => {
+=======
+                () => {
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                     this.$router.push({ name: 'proposeAdd' })
                 },
                 (err) => {

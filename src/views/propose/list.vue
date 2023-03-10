@@ -5,7 +5,11 @@
             <div class="spinner-border text-primary" style="height: 2em;margin-left:calc(50vw - 2em);" role="status"></div>
         </div>
         <div v-else>
+<<<<<<< HEAD
             <router-link v-for="cData in cardData" :to="{ name: 'proposeDetails', params: { id: cData.url } }"
+=======
+            <router-link v-for="cData in cardData" :key="cData.url" :to="{ name: 'proposeDetails', params: { id: cData.url } }"
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                 style="text-decoration: none; color: black;">
                 <div class="card-hover card card-item"
                     style="border-radius: 10px;border-width: 0px;border-color: rgb(0,0,0);margin-bottom: 5px;box-shadow: 0px 0px 1px 0px;">
@@ -26,7 +30,11 @@
                             aria-hidden="true">«</span></a>
                     <a v-else class="page-link disabled" aria-label="Previous"><span aria-hidden="true">«</span></a>
                 </li>
+<<<<<<< HEAD
                 <div v-for="index in pages">
+=======
+                <div v-for="index in pages" :key="index">
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                     <li class="page-item">
                         <a v-if="index == page" class="page-link active">{{ index }}</a>
                         <a v-else class="page-link" @click="gotoPage(index)">{{ index }}</a>
@@ -58,7 +66,11 @@ export default {
         }
     },
     watch: {
+<<<<<<< HEAD
         $route(to, from) {
+=======
+        $route(to) {
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
             this.page = (to.query.page == undefined) ? 1 : to.query.page;
             this.getList();
         }

@@ -19,7 +19,7 @@ export default {
     footerBar,
   },
   watch: {
-    $route (to, from) {
+    $route (to) {
       document.body.style.backgroundColor = (to.meta.bg == undefined) ? 'var(--bs-body-bg)' : to.meta.bg;
       if(to.query.login_alert != undefined){
         let alert_text = '';

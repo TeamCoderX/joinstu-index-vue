@@ -21,6 +21,7 @@ if(process.env.NODE_ENV === 'development'){
   })
 }else{
   module.exports = defineConfig({
+    publicPath: '/',
     transpileDependencies: true,
     lintOnSave: false,
   })

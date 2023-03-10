@@ -1,4 +1,4 @@
-# vue-front
+# joinstu-index-vue
 
 ## Project setup
 ```

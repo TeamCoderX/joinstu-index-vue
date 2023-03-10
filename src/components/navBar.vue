@@ -104,7 +104,10 @@
 <script>
 import { ajax } from '@/lib/util'
 import { parse } from 'cookie'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
 export default {
     name: 'navBar',
     data() {
@@ -124,11 +127,16 @@ export default {
     methods: {
         logout() {
             ajax.get('accounts/logout', {},
+<<<<<<< HEAD
                 (res) => {
+=======
+                () => {
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                     this.isLogin = false
                     this.$router.push('/')
                     this.$forceUpdate()
                 },
+<<<<<<< HEAD
                 (err) => {
                     alert('發生錯誤！')
                 })
@@ -140,6 +148,12 @@ export default {
                 console.log(response);
             })
         },
+=======
+                () => {
+                    alert('發生錯誤！')
+                })
+        },
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
         closeLogin() {
             this.status.showLoginModal = false;
             this.$router.push({ name: 'proposeList' })

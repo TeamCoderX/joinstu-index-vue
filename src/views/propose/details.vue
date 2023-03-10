@@ -52,12 +52,18 @@
 
 <script>
 import { ajax } from '@/lib/util'
+<<<<<<< HEAD
 import titleCard from '@/components/titleCard.vue'
+=======
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
 import commentSec from '@/components/comments.vue'
 
 export default {
     components: {
+<<<<<<< HEAD
         titleCard,
+=======
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
         commentSec,
     },
     name: 'proposeDetails',

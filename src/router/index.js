@@ -11,7 +11,11 @@ router.beforeEach((to, from, next) => {
   }
   next();
 })
+<<<<<<< HEAD
 router.afterEach((to, from) => {
+=======
+router.afterEach((to) => {
+>>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
   if (to.meta.title) {
     document.title = `${to.meta.title} | 中學生校園事務參與平台`;
   }
