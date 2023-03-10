@@ -100,11 +100,7 @@
 <script>
 import { ajax } from '@/lib/util'
 export default {
-<<<<<<< HEAD
-    name: 'comments',
-=======
     name: 'commentsSec',
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
     props: ['urlPrefix'],
     data() {
         return{
