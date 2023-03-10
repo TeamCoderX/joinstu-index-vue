@@ -36,11 +36,7 @@
                     <div class="col-md-6">
                         <h4>支持意見</h4>
                         <ul class="list-group overflow-auto" style="max-height: 40vh">
-<<<<<<< HEAD
-                            <li class="list-group-item" style="margin-bottom:6px;" v-if="status.updating == false" v-for="comment of commentData.support" :key="comment.contents">
-=======
                             <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.support" :key="comment.author">
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                                 <div class="d-flex media">
                                     <div class="media-body">
                                         <div class="d-flex media" style="overflow:visible;">
@@ -65,11 +61,7 @@
                     <div class="col-md-6">
                         <h4>其他意見</h4>
                         <ul class="list-group overflow-auto" style="max-height:40vh">
-<<<<<<< HEAD
-                            <li class="list-group-item" style="margin-bottom:6px;" v-if="status.updating == false" v-for="comment of commentData.else" :key="comment.contents">
-=======
                             <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.else" :key="comment.author">
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                                 <div class="d-flex media">
                                     <div class="media-body">
                                         <div class="d-flex media" style="overflow:visible;">
