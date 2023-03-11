@@ -4,11 +4,7 @@
         <div v-if="cardData==undefined">
             <div class="spinner-border text-primary" style="height: 2em;margin-left:calc(50vw - 2em);" role="status"></div>
         </div>
-<<<<<<< HEAD
-        <router-link v-else v-for="Cdata in cardData" :to="{name:'forumDetails',params:{id:(Cdata.url)}}" style="text-decoration: none; color: black;">
-=======
         <router-link v-else v-for="Cdata in cardData" :key="Cdata.url" :to="{name:'forumDetails',params:{id:(Cdata.url)}}" style="text-decoration: none; color: black;">
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
             <div class="card-hover card card-item" style="border-radius: 10px;border-width: 0px;border-color: rgb(0,0,0);margin-bottom: 5px;box-shadow: 0px 0px 1px 0px;">
                 <div class="card-body" style="border-top-width: 2px;border-top-color: var(--bs-gray);">
                     <h4 class="card-title"><span v-text="Cdata.title"></span></h4>
@@ -26,11 +22,7 @@
                 <a v-if="page != 1" class="page-link" aria-label="Previous" @click="gotoPage(page - 1)"><span aria-hidden="true">«</span></a>
                 <a v-else class="page-link disabled" aria-label="Previous"><span aria-hidden="true">«</span></a>
             </li>
-<<<<<<< HEAD
-            <div v-for="index in pages">
-=======
             <div v-for="index in pages" :key="index">
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                 <li class="page-item">
                     <a v-if="index == page" class="page-link active">{{ index }}</a>
                     <a v-else class="page-link" @click="gotoPage(index)">{{ index }}</a>
@@ -60,11 +52,7 @@ export default {
         }
     },
     watch: {
-<<<<<<< HEAD
-        $route(to, from) {
-=======
         $route(to) {
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
             this.page = (to.query.page == undefined) ? 1 : to.query.page;
             this.getList();
         }

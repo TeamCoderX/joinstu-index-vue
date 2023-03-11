@@ -20,11 +20,7 @@
                     <div v-if="buttonContents == undefined">
                         <div class="spinner-border text-white" role="status"></div>
                     </div>
-<<<<<<< HEAD
-                    <div v-else v-if="buttonIcon == undefined">{{ buttonContents }}</div>
-=======
                     <div v-else-if="buttonIcon == undefined">{{ buttonContents }}</div>
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                     <div v-else><i :class="`bi ${buttonIcon}`"></i></div>
                 </button>
             </div>

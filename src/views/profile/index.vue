@@ -22,11 +22,7 @@
                 <div class="spinner-border text-primary" style="height: 2em;margin-left:calc(50vw - 2em);" role="status"></div>
             </div>
         </div>
-<<<<<<< HEAD
-        <div style="padding: 5px;width: 100%;" v-if="status.updating == false">
-=======
         <div style="padding: 5px;width: 100%;">
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
             <h2>動態</h2>
             <div style="margin-bottom: 1em;">
                 <h3>最近附議</h3>
@@ -40,11 +36,7 @@
                     </div>
                 </div>
                 <div v-else>
-<<<<<<< HEAD
-                    <div v-for="card in recent.support" class="card" style="display: flex;margin: -4px;margin-bottom: 1em;">
-=======
                     <div v-for="card in recent.support" :key="card.url" class="card" style="display: flex;margin: -4px;margin-bottom: 1em;">
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                         <router-link class="card-body" :to="{ name: 'proposeDetails', params: { id: card.url } }">
                             <h4 class="card-title">
                                 <i class="bi bi-phone-landscape"></i>
@@ -67,11 +59,7 @@
                     </div>
                 </div>
                 <div v-else>
-<<<<<<< HEAD
-                    <div v-for="card in recent.propose" class="card" style="display: flex;margin-bottom: 1em;">
-=======
                     <div v-for="card in recent.propose" :key="card.url" class="card" style="display: flex;margin-bottom: 1em;">
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
                         <router-link class="card-body" :to="{ name: 'proposeDetails', params: { id: card.url } }">
                             <h4 class="card-title">
                                 <i class="bi bi-plus-square"></i>
@@ -89,11 +77,7 @@
 <script>
 import { ajax } from '@/lib/util'
 export default {
-<<<<<<< HEAD
-    name: 'Profile',
-=======
     name: 'profileIndex',
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
     data() {
         return {
             recent:{
@@ -103,10 +87,6 @@ export default {
             profile: undefined,
             status:{
                 access: undefined,
-<<<<<<< HEAD
-                updating: false,
-=======
->>>>>>> 81b59802d59b70e7b11a6ba631a6ada02ce011e9
             },
             data:{
                 id: undefined,
