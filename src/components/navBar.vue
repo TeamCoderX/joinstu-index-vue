@@ -62,11 +62,14 @@
                 </div>
                 <div class="modal-body">
                     <form id="form_login">
-                        <div v-if="alert != ''" class="alert alert-danger" role="alert">
+                        <div v-if="alert != ''" class="alert alert-danger alert-dismissible fade show" role="alert">
                             <i class="bi bi-exclamation-triangle" style="margin-right: 1em;"></i>
                             <strong>{{ alert }}</strong>
+                            <button type="button" class="btn close align-items-end" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <a href="/api/auth/google/login" class="btn btn-secondary" style="width: 100%;margin-bottom: 5px;">
+                        <a href="/api/auth/google/login" class="btn btn-danger" style="width: 100%;margin-bottom: 5px;">
                             <i class="bi bi-google" style="margin-right: 1em;"></i>
                             <strong>Google 登入</strong>
                         </a>
@@ -108,14 +111,16 @@ export default {
     name: 'navBar',
     data() {
         return {
-            alert: '',
+            // alert: '',
+            alert: '1223',
             isLogin: undefined,
             username: (parse(document.cookie).joinstu_username == undefined) ? '' : parse(document.cookie).joinstu_username,
             login_name: '',
             login_password: '',
             status: {
                 loginSending: false,
-                showLoginModal: false,
+                // showLoginModal: false,
+                showLoginModal: true,
                 usernameUpdate: false
             }
         }
