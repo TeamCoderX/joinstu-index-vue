@@ -65,7 +65,7 @@
                         <div v-if="alert != ''" class="alert alert-danger alert-dismissible fade show" role="alert">
                             <i class="bi bi-exclamation-triangle" style="margin-right: 1em;"></i>
                             <strong>{{ alert }}</strong>
-                            <button type="button" class="btn close align-items-end" data-dismiss="alert" aria-label="Close">
+                            <button type="button" class="btn close align-items-end" data-dismiss="alert" aria-label="Close" @click="clearAlert">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -111,21 +111,22 @@ export default {
     name: 'navBar',
     data() {
         return {
-            // alert: '',
-            alert: '1223',
+            alert: '',
             isLogin: undefined,
             username: (parse(document.cookie).joinstu_username == undefined) ? '' : parse(document.cookie).joinstu_username,
             login_name: '',
             login_password: '',
             status: {
                 loginSending: false,
-                // showLoginModal: false,
-                showLoginModal: true,
+                showLoginModal: false,
                 usernameUpdate: false
             }
         }
     },
     methods: {
+        clearAlert() {
+            this.alert = ''
+        },
         logout() {
             ajax.get('accounts/logout', {},
                 () => {
