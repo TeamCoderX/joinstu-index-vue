@@ -22,13 +22,13 @@ jobs:
         working-directory: ./joinstu-index-vue
         run: |
           npm install
-          npm run build
-      - name: Copy to backend 
+      - name: Clone backend 
         run: |
           git clone -b deploy --single-branch https://github.com/TeamCoderX/joinstu-backend.git
-          rm -rf joinstu-backend/dist/index
-          mkdir joinstu-backend/dist/index
-          cp -r ./joinstu-index-vue/dist/* ./joinstu-backend/dist/index
+      - name: build to backend
+        working-directory: ./joinstu-backend
+        run: |
+          bash build.sh index
       - name: Commit Files
         working-directory: ./joinstu-backend
         run: |
@@ -38,5 +38,4 @@ jobs:
           git config --global user.name "Team-coderX"
           git commit -m "Add changes" -a
           git push
-        
-
+  
