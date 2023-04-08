@@ -28,6 +28,7 @@ jobs:
       - name: build to backend
         working-directory: ./joinstu-backend
         run: |
+          rm .gitignore
           bash build.sh index
       - name: Commit Files
         working-directory: ./joinstu-backend
@@ -38,4 +39,3 @@ jobs:
           git config --global user.name "Team-coderX"
           git commit -m "Add changes" -a
           git push
-  
