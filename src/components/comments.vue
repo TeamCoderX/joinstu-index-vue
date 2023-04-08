@@ -36,7 +36,7 @@
                     <div class="col-md-6">
                         <h4>支持意見</h4>
                         <ul class="list-group overflow-auto" style="max-height: 40vh">
-                            <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.support" :key="comment.author">
+                            <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.support" :key="comment.id" v-if="!status.commentUpdate">
                                 <div class="d-flex media">
                                     <div class="media-body">
                                         <div class="d-flex media" style="overflow:visible;">
@@ -61,7 +61,7 @@
                     <div class="col-md-6">
                         <h4>其他意見</h4>
                         <ul class="list-group overflow-auto" style="max-height:40vh">
-                            <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.else" :key="comment.author">
+                            <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.else" :key="comment.id" v-if="!status.commentUpdate">
                                 <div class="d-flex media">
                                     <div class="media-body">
                                         <div class="d-flex media" style="overflow:visible;">
