@@ -28,7 +28,7 @@ jobs:
       - name: build to backend
         working-directory: ./joinstu-backend
         run: |
-          rm .gitignore
+          if [ -e "a" ];then rm -rf "a" ; fi
           bash build.sh index
       - name: Commit Files
         working-directory: ./joinstu-backend
