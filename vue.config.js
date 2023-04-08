@@ -6,11 +6,11 @@ if(process.env.NODE_ENV != 'production'){
     devServer:{
       proxy: {
         '/api': {
-          target: 'http://127.0.0.1:3000/',
+          target: 'https://127.0.0.1:3000/',
           credential: true,
           changeOrigin: true,
           cookiePathRewrite: {
-            '*': 'http://127.0.0.1:3000/'
+            '*': 'https://127.0.0.1:3000/'
           },
           cookieDomainRewrite: {
             '*': '127.0.0.1'
@@ -21,7 +21,7 @@ if(process.env.NODE_ENV != 'production'){
   })
 }else{
   module.exports = defineConfig({
-    publicPath: '/',
+    publicPath: './',
     transpileDependencies: true,
     lintOnSave: false,
   })
