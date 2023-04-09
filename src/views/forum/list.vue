@@ -4,7 +4,7 @@
         <div v-if="cardData==undefined">
             <div class="spinner-border text-primary" style="height: 2em;margin-left:calc(50vw - 2em);" role="status"></div>
         </div>
-        <router-link v-else v-for="Cdata in cardData" :key="Cdata.url" :to="{name:'forumDetails',params:{id:(Cdata.url)}}" style="text-decoration: none; color: black;">
+        <router-link v-else v-for="Cdata in cardData" :key="Cdata.id" :to="{name:'forumDetails',params:{id:(Cdata.id)}}" style="text-decoration: none; color: black;">
             <div class="card-hover card card-item" style="border-radius: 10px;border-width: 0px;border-color: rgb(0,0,0);margin-bottom: 5px;box-shadow: 0px 0px 1px 0px;">
                 <div class="card-body" style="border-top-width: 2px;border-top-color: var(--bs-gray);">
                     <h4 class="card-title"><span v-text="Cdata.title"></span></h4>

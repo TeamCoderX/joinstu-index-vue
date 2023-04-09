@@ -5,7 +5,7 @@
             <div class="spinner-border text-primary" style="height: 2em;margin-left:calc(50vw - 2em);" role="status"></div>
         </div>
         <div v-else>
-            <router-link v-for="cData in cardData" :key="cData.url" :to="{ name: 'proposeDetails', params: { id: cData.url } }"
+            <router-link v-for="cData in cardData" :key="cData.id" :to="{ name: 'proposeDetails', params: { id: cData.id } }"
                 style="text-decoration: none; color: black;">
                 <div class="card-hover card card-item"
                     style="border-radius: 10px;border-width: 0px;border-color: rgb(0,0,0);margin-bottom: 5px;box-shadow: 0px 0px 1px 0px;">

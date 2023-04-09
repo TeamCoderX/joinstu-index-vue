@@ -15,6 +15,7 @@
                     <span>份)</span>
                 </div>
                 <div v-else>
+                    
                     <div>
                         <span>已附議</span>
                         <span style="color: var(--bs-blue);font-size: 24px;">{{ cardData.num }}</span>

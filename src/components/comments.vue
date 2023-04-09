@@ -61,7 +61,7 @@
                     <div class="col-md-6">
                         <h4>其他意見</h4>
                         <ul class="list-group overflow-auto" style="max-height:40vh">
-                            <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.else" :key="comment.id" v-if="!status.commentUpdate">
+                            <li class="list-group-item" style="margin-bottom:6px;" v-for="comment of commentData.else" :key="comment.id" v-if="!status.updating">
                                 <div class="d-flex media">
                                     <div class="media-body">
                                         <div class="d-flex media" style="overflow:visible;">
@@ -100,7 +100,7 @@ export default {
             comment: '',
             isLogin: undefined,
             status:{
-                commentUpdate: false,
+                updating: false,
                 sendingComment: false,
             }
         }
@@ -135,8 +135,6 @@ export default {
                                 console.error(err);
                             }))
                     }
-                    this.status.commentUpdate = true;
-                    this.status.commentUpdate = false;
                 },
                 (err) => {
                     console.error(err);
