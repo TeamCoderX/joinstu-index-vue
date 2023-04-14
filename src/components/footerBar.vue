@@ -2,9 +2,9 @@
 <footer class="text-center bg-dark">
     <div class="container text-white pt-3">
         <ul class="list-inline">
-            <li class="list-inline-item me-4">
+            <!-- <li class="list-inline-item me-4">
                 <a class="link-light" target="_blank" href="https://forms.gle/LUmjumBrYxnV3TVs5">使用問卷</a>
-            </li>
+            </li> -->
         </ul>
         <ul class="list-inline" style="border-radius: 10px;">
             <li class="list-inline-item me-4" title="後臺管理系統">
