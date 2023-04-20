@@ -24,7 +24,7 @@
                         <span style="color: var(--bs-blue);font-size: 24px;">已達到目標50份</span>
                     </div>
                 </div>
-                <div v-if="new Date().getDate() - new Date(cardData.date).getDate() <= 30">
+                <div v-if="new Date().getDate() - new Date(cardData.date).getDate() >= 30">
                     <span style="color: var(--bs-blue);font-size: 24px;">附議已截止</span>
                 </div>
                 <div v-else>
@@ -40,8 +40,8 @@
                 <h4>簡介</h4>
                 <span style="white-space: pre-wrap;">{{ cardData.details }}</span>
                 <div class="text-center">
-                    <button v-if="new Date().getDate() - new Date(cardData.date).getDate() <= 30"
-                        class="btn btn-primary center" disabled>附議已截止</button>
+                    <button v-if="new Date().getDate() - new Date(cardData.date).getDate() >= 30"
+                        class="btn btn-secondary center" disabled>附議已截止</button>
                     <button v-else-if="isSupported == 'adm'" class="btn btn-secondary center" type="button"
                         disabled>管理員不可參與</button>
                     <button v-else-if="isSupported == undefined" class="btn btn-primary center" type="button" disabled>
